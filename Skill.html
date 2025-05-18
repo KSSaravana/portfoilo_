@@ -1,0 +1,178 @@
+<HTML>
+ <head>
+    <title>Saravana Website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <header class="header">
+      <a href="#"class="logo">Saravana Kumar</a>
+          <nav class="navbar">
+              <a href="Saravana Website.html">Home</a>
+              <a href="Skill.html">Skills</a>
+              <a href="education.html">Eduaction</a>
+              <a href="experience.html">Experience</a>
+              
+          </nav>
+      </header>
+      </head>
+    <style>
+      .{
+    margin: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+      }
+      body {
+  font-family: 'Times New Roman', Times, serif;
+  background: #040404;
+  padding: 90px;
+}
+.skill i{
+  padding: auto;
+    width: 50px;
+    display: contents;
+    justify-content:space-evenly;
+}
+
+.skill-container {
+  width: 500px;
+  margin: auto;
+  color: #00abf0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgb(250, 1, 1);
+  font-size:xx-large ;
+}
+.skill {
+  margin-bottom: 30px;
+  font-size: xx-large;
+}
+
+.skill span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.bar {
+  background: #ddd;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 25px;
+}
+
+.progress {
+  height: 100%;
+  color: rgb(247, 237, 237);
+  text-align: right;
+  padding-right: 10px;
+  line-height: 25px;
+  border-radius: 20px;
+}
+
+.html {
+  width: 90%;
+  background: #e44d26;
+}
+
+.css {
+  width: 85%;
+  background: #264de4;
+}
+
+.js {
+  width: 75%;
+  background: #f0db4f;
+  color: #000;
+}
+.py {
+  width: 75%;
+  background: #f04fda;
+  color: #000;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 2px;
+    background: transparent ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+    z-index:100;
+}
+.logo{
+  position: relative;
+    font-size: 30px;
+    color:antiquewhite ;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background:#060606;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a{
+    font-size: 20px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 250;
+    margin-left: 25px;
+    transition: .3s;
+}
+.navbar a:hover{
+    color: #ea0716;
+}
+@keyframes showRight{
+    100%{
+        width:0;
+    }
+}
+
+
+      </style>
+
+<body>
+  
+
+  <div class="skill-container">
+    <h2>My Skills</h2>
+
+    <div class="skill">
+        
+        <i class='bx bxl-html5'>HTML</i>
+      <div class="bar">
+        <div class="progress html">90%</div>
+      </div>
+    </div>
+
+    <div class="skill">
+        <i class='bx bxl-css3'>CSS</i>
+      <div class="bar">
+        <div class="progress css">85%</div>
+      </div>
+    </div>
+
+    <div class="skill">
+        <i class='bx bxl-javascript'>JavaScript</i>
+      <div class="bar">
+        <div class="progress js">75%</div>
+      </div>
+    </div>
+      <div class="skill">
+        <i class='bx bxl-python'>Python</i>
+      <div class="bar">
+        <div class="progress py">50%</div>
+      </div>
+
+  </div>
+
+</body>
+</HTML>

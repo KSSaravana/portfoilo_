@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saravana Website</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #060606;
+      color: #ededed;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 24px;
+      color: antiquewhite;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .logo::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #060606;
+      animation: showRight 1s ease forwards;
+      animation-delay: .4s;
+    }
+
+    .navbar a {
+      font-size: 16px;
+      color: #ededed;
+      text-decoration: none;
+      font-weight: 400;
+      margin-left: 20px;
+      transition: .3s;
+    }
+
+    .navbar a:hover {
+      color: #ea0716;
+    }
+
+    .home {
+      min-height: 100vh;
+      background: url('Untitled-1.html') no-repeat center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 100px 20px 0;
+      text-align: center;
+    }
+
+    .home-content {
+      max-width: 900px;
+    }
+
+    .home-content h1 {
+      font-size: 42px;
+      font-weight: 600;
+      position: relative;
+    }
+
+    .home-content h1::before,
+    .home-content h3::before,
+    .home-content p::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: #060606;
+      animation: showRight 1s ease forwards;
+    }
+
+    .home-content h1::before {
+      animation-delay: 1s;
+    }
+
+    .home-content h3 {
+      font-size: 28px;
+      font-weight: 600;
+      color: #00abf0;
+      position: relative;
+    }
+
+    .home-content h3::before {
+      animation-delay: 1.3s;
+    }
+
+    .home-content p {
+      font-size: 16px;
+      margin: 20px 0 30px;
+      position: relative;
+    }
+
+    .home-content p::before {
+      animation-delay: 1.6s;
+    }
+
+    .btn-box {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .btn-box a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 140px;
+      height: 45px;
+      background: #0791e0;
+      border: 2px solid #0791e0;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #060606;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: .5s;
+    }
+
+    .btn-box a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #101011;
+      z-index: -1;
+      transition: .5s;
+    }
+
+    .btn-box a:hover::before {
+      width: 100%;
+    }
+
+    .btn-box a:hover {
+      color: #11a6d3;
+    }
+
+    .home-sci {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+    }
+
+    .home-sci a {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      border: 2px solid #00abf0;
+      border-radius: 50%;
+      color: #00abf0;
+      font-size: 20px;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: .5s;
+    }
+
+    .home-sci a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background: #00abf0;
+      z-index: -1;
+      transition: .5s;
+    }
+
+    .home-sci a:hover::before {
+      width: 100%;
+    }
+
+    .home-sci a:hover {
+      color: #060606;
+    }
+
+    @keyframes showRight {
+      100% {
+        width: 0;
+      }
+    }
+
+    /* ====== Responsive Styling ====== */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+      }
+
+      .navbar {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .home-content h1 {
+        font-size: 32px;
+      }
+
+      .home-content h3 {
+        font-size: 24px;
+      }
+
+      .home-content p {
+        font-size: 14px;
+      }
+
+      .btn-box {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-box a {
+        width: 100%;
+        max-width: 200px;
+      }
+
+      .home-sci {
+        position: static;
+        margin-top: 30px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="#" class="logo">Saravana Kumar</a>
+    <nav class="navbar">
+      <a href="Saravana Website.html">Home</a>
+      <a href="Skill.html">Skills</a>
+      <a href="education.html">Education</a>
+      <a href="experience.html">Experience</a>
+    </nav>
+  </header>
+
+  <section class="home">
+    <div class="home-content">
+      <h1>Hi, I'm Saravana Kumar</h1>
+      <h3>Frontend Developer</h3>
+      <p>
+        Adept at problem-solving and data management, I excelled as an intern at Allset Business Solutions, enhancing customer 
+        satisfaction through efficient dispute resolution. Skilled in HTML5, CSS3, and JavaScript, I combine technical proficiency 
+        with strong interpersonal abilities to deliver outstanding results.
+      </p>
+      <div class="btn-box">
+        <a href="https://wa.me/+918688479187">Let's Talk</a>
+      </div>
+    </div>
+
+    <div class="home-sci">
+      <a href="https://www.linkedin.com/in/saravana-kumar-ks-335b78244"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://www.instagram.com/SaravanaKumarKS"><i class='bx bxl-instagram'></i></a>
+      <a href="https://wa.me/+918688479187"><i class='bx bxl-whatsapp'></i></a>
+    </div>
+  </section>
+
+</body>
+</html>
